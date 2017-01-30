@@ -38,3 +38,8 @@ captures/
 
 # Keystore files
 *.jks
+
+## These lines are from Android Studio
+.idea/libraries
+.DS_Store
+.externalNativeBuild
