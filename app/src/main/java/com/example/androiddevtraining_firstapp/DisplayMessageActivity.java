@@ -3,8 +3,12 @@ package com.example.androiddevtraining_firstapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import static com.example.androiddevtraining_firstapp.MainActivity.EXTRA_MESSAGE;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 
@@ -15,7 +19,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_message);
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(EXTRA_MESSAGE);
         TextView textView = new TextView(this);
         textView.setTextSize(40);
         textView.setText(message);
@@ -29,5 +33,12 @@ public class DisplayMessageActivity extends AppCompatActivity {
         textView2.setTextSize(80);
         textView2.setText("No Whammy!!");
         layout.addView(textView2);
+    }
+
+    /** Called when the user clicks the Press Your Luck button. **/
+    public void sendMessage(View view)
+    {
+        Intent intent = new Intent(this, FragmentExample.class);
+        startActivity(intent);
     }
 }

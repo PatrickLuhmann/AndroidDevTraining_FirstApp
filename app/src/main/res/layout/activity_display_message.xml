@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- The id can be any aritrary identifier. -->
+<!-- The id can be any arbitrary identifier. -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,5 +15,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_disp_title"
+        android:onClick="sendMessage"/>
     />
 </LinearLayout>

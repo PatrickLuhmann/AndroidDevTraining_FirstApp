@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".DisplayMessageActivity">
         </activity>
+        <activity android:name=".FragmentExample">
+        </activity>
     </application>
 
 </manifest>
