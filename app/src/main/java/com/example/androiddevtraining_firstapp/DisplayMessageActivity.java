@@ -11,6 +11,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // NOTE: This uses the name of the file, not the id.
         setContentView(R.layout.activity_display_message);
 
         Intent intent = getIntent();
@@ -19,7 +20,9 @@ public class DisplayMessageActivity extends AppCompatActivity {
         textView.setTextSize(40);
         textView.setText(message);
 
-        ViewGroup layout = (ViewGroup) findViewById(R.id.activity_display_message);
+        // NOTE: This uses the explicitly-defined id, which can be any arbitrary
+        // name. It does not need to be the same as the name of the XML file.
+        ViewGroup layout = (ViewGroup) findViewById(R.id.pjl_activity_display_message);
         layout.addView(textView);
 
         TextView textView2 = new TextView(this);
